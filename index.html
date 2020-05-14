@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.scss">
+    <script src="./main.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <h1></h1>
+    <main class="d-flex col-12">
+        <div id="list-container" class="d-flex flex-column col-6">
+            <h2>Lista</h2>
+            <button onclick="resetForm()" class="btn btn-success">Aggiungi nuovo elemento</button>
+            <table id="table" class="table col-12">
+                <thead>
+                    <th>
+                        Titolo post
+                    </th>
+                </thead>
+                <tbody id="rows">
+
+                </tbody>
+
+            </table>
+        </div>
+
+        <div id="detail-container" class="d-flex flex-column col-6">
+            <h2>Dettaglio</h2>
+            <form id="detail-form">
+                <div class="form-group">
+                    <input type="hidden" class="form-control" id="postId">
+                </div>
+                <div class="form-group">
+                    <label for="postTitle">Titolo Post</label>
+                    <input type="text" class="form-control" id="postTitle" placeholder="Inserisci il titolo del post">
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Fatto</label>
+                </div>
+                <div id="button-container">
+                    <button class="btn btn-success" id="form-button" onclick="createPost(event)"
+                        type="submit">Invia</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+
+</body>
+
+</html>
